@@ -1191,6 +1191,68 @@
       .popup-card img { aspect-ratio:1.55; }
       .demo-ribbon { font-size:9px; }
     }
+
+    /* Compact portrait pop-up cards; override the image height attributes. */
+    .popup-gallery-section { padding:52px 0; }
+    .popup-intro { margin-bottom:25px; }
+    .popup-intro h2 { font-size:clamp(36px,4vw,50px); line-height:1.06; }
+    .popup-grid { width:min(100%,720px); margin:0 auto; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; align-items:start; }
+    .popup-card { display:block; min-width:0; }
+    .popup-card img { width:100%; height:auto; aspect-ratio:3 / 4; max-height:302px; object-fit:cover; object-position:65% center; }
+    .popup-card:nth-child(2) img { object-position:43% center; }
+    .popup-card:nth-child(3) img { object-position:42% center; }
+    .popup-card figcaption { padding:17px 16px 19px; }
+    .popup-card h3 { font-size:23px; line-height:1.17; margin-top:9px; }
+    .team-photograph img { height:auto; }
+    @media(max-width:850px) {
+      .popup-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+      .popup-card { display:block; }
+      .popup-card img { height:auto; aspect-ratio:3 / 4; }
+      .popup-card figcaption { padding:15px 13px; }
+      .popup-card h3 { font-size:21px; }
+    }
+    @media(max-width:560px) {
+      .popup-gallery-section { padding:42px 0; }
+      .popup-intro h2 { font-size:38px; }
+      .popup-grid { width:min(100%,290px); grid-template-columns:1fr; gap:22px; }
+      .popup-card img { height:auto; aspect-ratio:3 / 4; max-height:340px; }
+      .popup-card figcaption { padding:18px; }
+      .popup-card h3 { font-size:25px; }
+    }
+
+    /* Final compact sizing for pop-up and training photography. */
+    .popup-gallery-section { padding:44px 0; }
+    .popup-intro h2 { font-size:clamp(34px,3.5vw,44px); }
+    .popup-grid { width:min(100%,584px); gap:22px; grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .popup-card img { width:100%; height:240px; min-height:0; max-height:240px; aspect-ratio:auto; object-fit:cover; }
+    .popup-card figcaption { padding:14px 13px 16px; }
+    .popup-card h3 { font-size:20px; }
+    .popup-card span { font-size:9px; letter-spacing:.08em; }
+    .team-story { max-width:960px; grid-template-columns:minmax(0,320px) minmax(0,1fr); gap:48px; padding-top:60px; padding-bottom:60px; }
+    .team-photograph { width:100%; max-width:320px; justify-self:center; }
+    .team-photograph img { display:block; width:100%; height:240px; max-height:240px; aspect-ratio:auto; object-fit:cover; }
+    .team-copy h2 { font-size:clamp(34px,3.5vw,44px); }
+    .team-copy p { font-size:15px; line-height:1.65; }
+    @media(max-width:850px) {
+      .popup-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+      .popup-card img { height:240px; max-height:240px; aspect-ratio:auto; }
+      .popup-card h3 { font-size:20px; }
+      .team-story { grid-template-columns:minmax(0,280px) minmax(0,1fr); gap:28px; }
+      .team-copy h2 { font-size:34px; }
+    }
+    @media(max-width:560px) {
+      .popup-grid { width:min(100%,240px); grid-template-columns:1fr; gap:22px; }
+      .popup-card img { height:300px; max-height:300px; aspect-ratio:auto; }
+      .popup-card figcaption { padding:17px; }
+      .popup-card h3 { font-size:23px; }
+      .team-story { grid-template-columns:1fr; gap:25px; padding-top:44px; padding-bottom:44px; }
+      .team-photograph { max-width:300px; }
+      .team-photograph img { height:225px; max-height:225px; }
+      .team-copy h2 { font-size:36px; }
+    }
+
+    /* Keep the three people visible in the fragrance pop-up crop. */
+    .popup-card:first-child img { object-position:100% center; }
   </style>
 </head>
 
